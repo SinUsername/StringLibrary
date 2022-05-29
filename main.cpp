@@ -99,14 +99,14 @@ BOOL CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam){
 				}
 			}
 			else if (strcmp(command, Sprit) == 0){
-				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"openCreatorSprit():\"", "Escrity : obteniendo...", MB_ICONINFORMATION);
+				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"openCreatorSprit():\"", "Escrity : output", MB_ICONINFORMATION);
 				printf("(\"");
 				gets(user1);
 				printf("\"):\n");
 				Sprits1(user1);
 			}
 			else if (strcmp(command, sum) == 0){
-				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : obteniendo...", MB_ICONINFORMATION);
+				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : output", MB_ICONINFORMATION);
 				printf("( ");
 				scanf("%i", &num1);
 				printf(" )\n");
@@ -117,7 +117,7 @@ BOOL CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam){
 				printf(">> N : ( %i ) + N : ( %i ) = (%i)\n",num1,num2,result);
 			}
 			if (strcmp(command, res) == 0){
-				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : obteniendo...", MB_ICONINFORMATION);
+				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : output", MB_ICONINFORMATION);
 				printf("( ");
 				scanf("%i", &num1);
 				printf(" )\n");
@@ -128,7 +128,7 @@ BOOL CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam){
 				printf(">> N : ( %i ) - N : ( %i ) = (%i)\n",num1,num2,result);
 			}
 			else if (strcmp(command, mult) == 0){
-				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : obteniendo...", MB_ICONINFORMATION);
+				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : output", MB_ICONINFORMATION);
 				printf("( ");
 				scanf("%i", &num1);
 				printf(" )\n");
@@ -139,7 +139,7 @@ BOOL CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam){
 				printf(">> N : ( %i ) * N : ( %i ) = (%i)\n",num1,num2,result);
 			}
 			if (strcmp(command, divi) == 0){
-				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : obteniendo...", MB_ICONINFORMATION);
+				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"sum():\"", "Escrity : output", MB_ICONINFORMATION);
 				printf("( ");
 				scanf("%i", &num1);
 				printf(" )\n");
@@ -149,6 +149,7 @@ BOOL CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam){
 				result = num1 / num2;
 				printf(">> N : ( %i ) / N : ( %i ) = (%i)\n",num1,num2,result);
 			}
+
 			else if (strcmp(command, dream) == 0){
 				MessageBox(hwndDlg, "Se ha obtenido la instruccion \"dream():\"", "Escrity : obteniendo...", MB_ICONINFORMATION);
 				printf("( ");
@@ -156,10 +157,7 @@ BOOL CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam){
 				printf(" ):\n");
 				Sleep(num1);
 			}
-			else{
-				printf("Escrity : error : sintaxis : no se ha encontrado\n");
-				MessageBox(hwndDlg, "Escrity error sintaxis : no se encontro en la lista de instrucciones. La solicitada", "Escrity : error : sintaxis", MB_ICONERROR);
-			}
+			
 			return TRUE;
 
 			case ID_BTN_EJECUTAR2:
